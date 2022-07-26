@@ -1,8 +1,40 @@
 import React from 'react'
+import {AiOutlineClose} from 'react-icons/ai'
 
+let useClickOutside=(handler)=>{
+  let domNode = React.useRef()
+
+  React.useEffect(()=>{
+      let maybeHandler = (event)=>{
+          if (!domNode.current.contains(event.target)){
+              handler()
+          }
+      }
+      document.addEventListener("mousedown",maybeHandler)
+
+      return () =>{
+          document.removeEventListener("mousedown",maybeHandler)
+      }
+  })  
+  return domNode
+}
 
 export default function Portfolio() {
   const projectsData=[
+    {
+      id:10,
+      img:'portfolio10.png',
+      title:'Share photos with others around the world',
+      github:'https://github.com/duxpixels/TouchShare',
+      demo:'https://touchshare.netlify.app/',
+    },
+    {
+      id:11,
+      img:'portfolio11.png',
+      title:'Dashboard with group of Apps and Charts',
+      github:'https://github.com/duxpixels/Apps-Charts-dashboard',
+      demo:'https://appsandcharts.netlify.app/',
+    },
     {
       id:1,
       img:'portfolio1.png',
@@ -67,6 +99,7 @@ export default function Portfolio() {
       demo:'https://drawwithboxes.netlify.app/',
     },
   ]
+
   const graphicData =[
     {
       id:8,
@@ -117,6 +150,18 @@ export default function Portfolio() {
       view:'https://drive.google.com/file/d/1sH-B4vKKS1B8Ss_1LNaHewfwXVXzHbT8/view?usp=sharing',
     },
   ]
+
+  const [imgSrc,setImgSrc]=React.useState('')
+  const [isOpen,setIsOpen]=React.useState(false)
+
+  function getImg(imgSrc){
+    setIsOpen(true)
+    setImgSrc(imgSrc)
+  }
+  let domNode = useClickOutside(()=>{
+    setIsOpen(false)
+  })
+
   return (
     <section id='portfolio'>
       <h5>My recent works</h5>
@@ -152,6 +197,14 @@ export default function Portfolio() {
       </div>
       <h2 style={{marginTop:'3rem'}}>In graphic</h2>
       <div className="container protfolio-container">
+        {isOpen 
+        &&
+          <div id='img-view'>
+            <img ref={domNode} src={imgSrc} alt="" />
+            <span id="view-bg" onClick={()=>setIsOpen(false)}></span>
+            <AiOutlineClose id='close-img-view' onClick={()=>{setIsOpen(false)}}/>
+          </div>
+        }
           {graphicData.map(photo=>{
             return(
               <article key={photo.id}  className='protfolio-item'>
@@ -161,7 +214,7 @@ export default function Portfolio() {
                 </div>
                 <h3>{photo.title}</h3>
                 <div className="cta">
-                  <a href={photo.view} className="btn btn-primary" target="_blank" style={{width:'90%',margin:'0 auto',textAlign:'center'}}>View</a>
+                  <button className="btn btn-primary" target="_blank" style={{width:'90%',margin:'0 auto',textAlign:'center',fontWeight:"bold"}} onClick={()=>{getImg(require(`../images/${photo.img}`))}}>View</button>
                 </div>
               </article>
             )

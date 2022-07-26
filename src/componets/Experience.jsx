@@ -233,7 +233,7 @@ export default function experience() {
               <div>
                 <h4>React</h4>
                 <div className="progress">
-                  <span className="react" data-width='80'></span>
+                  <span className="react" data-width='75'></span>
                   <p className="react-percent"></p>
                 </div>
               </div>
@@ -241,9 +241,9 @@ export default function experience() {
             <article className='experience-details'>
               <BsPatchCheckFill className="icon"/>
               <div>
-                <h4>Bootstrap</h4>
+                <h4>Tailwindcss</h4>
                 <div className="progress">
-                  <span className="bootstrab" data-width='10' ></span>
+                  <span className="bootstrab" data-width='85' ></span>
                   <p class="bootstrab-percent"></p>
                 </div>
               </div>

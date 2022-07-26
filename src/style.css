@@ -80,6 +80,7 @@ a:hover , a:focus{
     border-radius: 0.4rem;
     cursor: pointer;
     padding: 0.75rem 1.2rem;
+    z-index: 1;
 }
 .btn:hover,.btn:focus{
     background: var(--white);
@@ -89,10 +90,12 @@ a:hover , a:focus{
 
 .btn:hover, .btn:focus , .btn-primary{
     color: var(--background);
+    z-index: 1;
 }
 .btn-primary{
     background: var(--color-primary);
     box-shadow: 0 0 15px var(--color-primary);
+    z-index: 1;
 }
 img{
     width: 100%;
@@ -270,16 +273,18 @@ img{
       font-size: 3rem;
       position: relative;
       display: inline-block;
-      border:0.125em solid #14f7ff ;
+      border:0.125em solid #14f7ff;
       padding: 0.25em 1em;
       border-radius: 0.25em;
       z-index: 3;
       text-shadow: 
       0 0 0.20em #fff7,
           0 0 0.30em #14f7ff;
-      box-shadow: 
-      inset 0 0 0.5em #14f7ff,
+          box-shadow: 
+          inset 0 0 0.5em #14f7ff,
           0 0 0.5em #14f7ff;
+          
+    animation: animateColor 9s linear infinite;
   }
   
   .neon::before{
@@ -542,6 +547,7 @@ nav a.active{
     color: var(--light-color);
     margin: 2rem 0 2.5rem 0;
 }
+
 /* ————————————▷[ END ABOUT ]◀———————————— */
 
 
@@ -761,10 +767,12 @@ nav a.active{
     background: transparent;
 }
 .protfolio-item img{
-    border-radius: 1rem;
+    border-radius: 10px;
+    object-fit:fill;
 }
 .protfolio-item h3{
     margin: 1.3rem 0 2rem 0;
+    text-align: center;
 }
 .protfolio-item .cta{
     margin-bottom: 1rem;
@@ -1186,3 +1194,130 @@ footer .social::before{
 
 
   
+#mouse-hint{
+    position: absolute;
+    top:50px;
+    text-align: center;
+}
+
+#mouse-effect{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    overflow: hidden;
+    animation: animateColor 4s linear infinite;
+}
+
+@keyframes animateColor {
+    0%{
+        filter: hue-rotate(0);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+#mouse-effect span{
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: none;
+}
+
+#mouse-effect span::before{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 170%;
+    height: 170%;
+    background: #00ff0a;
+    box-shadow: 0 0 10px #00ff0a,
+                0 0 20px #00ff0a,
+                0 0 40px #00ff0a,
+                0 0 60px #00ff0a,
+                0 0 80px #00ff0a,
+                0 0 100px #00ff0a;
+    border-radius: 100%;
+    transition: 2s;
+    transform: scale(0);
+}
+
+#mouse-effect span:hover::before{
+    transition: 0s;
+    transform: scale(1);
+}
+
+span#active-circle::before{
+    transform: scale(1);
+}
+
+
+
+
+#img-view{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    animation: imgView 150ms linear both;
+}
+
+#img-view img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height:98% ;
+    z-index: 99999;
+}
+#img-view #close-img-view{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 35px;
+    width: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 99999;
+    background: #fff;
+    color: black;
+    border-radius: 100%;
+    padding: 8px;
+    opacity: 0.75;
+    transition: all 200ms ease;
+}
+
+#img-view #close-img-view:hover{
+    opacity: 1;
+}
+
+@keyframes imgView {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#view-bg{
+    background-color: rgba(0,0,0,0.89);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
