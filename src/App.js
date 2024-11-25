@@ -33,9 +33,7 @@ let useClickOutside=(handler)=>{
 
 
 export default function App(){
-    const [started,setStarted] = React.useState(false)
     function runSite(){
-        setStarted(s=>true)
         document.querySelector('.intro').style.opacity='0'
         setTimeout(() => {
             document.querySelector('.intro').style.display='none'
@@ -43,7 +41,7 @@ export default function App(){
         }, 400);
         setTimeout(() => {
             document.querySelector('header .logo').classList.add('showing')
-        }, 2000);
+        }, 500);
     }
 
 
@@ -115,7 +113,7 @@ export default function App(){
                 <div class="neon" onClick={runSite}>Show it</div>
             </div>
             <div className="site">
-                <Header started={started} />
+                <Header />
                 <Nav />
                 <About />
                 <Experience />

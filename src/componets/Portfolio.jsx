@@ -25,77 +25,49 @@ export default function Portfolio() {
       id:10,
       img:'portfolio10.png',
       title:'Share photos with others around the world',
-      github:'https://github.com/duxpixels/TouchShare',
+      github:'https://github.com/mohammadabdulhakim/TouchShare',
       demo:'https://touchshare.netlify.app/',
     },
     {
       id:11,
       img:'portfolio11.png',
       title:'Dashboard with group of Apps and Charts',
-      github:'https://github.com/duxpixels/Apps-Charts-dashboard',
+      github:'https://github.com/mohammadabdulhakim/Apps-Charts-dashboard',
       demo:'https://appsandcharts.netlify.app/',
     },
     {
       id:1,
       img:'portfolio1.png',
       title:'Check your typing Speed',
-      github:'https://github.com/duxpixels/Typing-Speed-Test',
+      github:'https://github.com/mohammadabdulhakim/Typing-Speed-Test',
       demo:'https://duxtypingspeedtest.netlify.app/',
     },
     {
       id:3,
       img:'portfolio3.png',
       title:'Admin dashboard design',
-      github:'https://github.com/duxpixels/Admin-dashboard-design',
+      github:'https://github.com/mohammadabdulhakim/Admin-dashboard-design',
       demo:'https://duxadmindashboard.netlify.app/',
     },
     {
       id:9,
       img:'portfolio9.png',
       title:'CRUDS operations',
-      github:'https://github.com/duxpixels/CRUDS',
+      github:'https://github.com/mohammadabdulhakim/CRUDS',
       demo:'https://duxcruds.netlify.app/',
     },
     {
       id:2,
       img:'portfolio2.png',
       title:'FRESH COFEE',
-      github:'https://github.com/duxpixels/Coffee-shop',
+      github:'https://github.com/mohammadabdulhakim/Coffee-shop',
       demo:'https://duxcoffeeshop.netlify.app/',
-    },
-    {
-      id:4,
-      img:'portfolio4.png',
-      title:'Play blackjack with your friend',
-      github:'https://github.com/duxpixels/Blackjack-with-friend',
-      demo:'https://duxblackjack.netlify.app/',
-    },
-    {
-      id:5,
-      img:'portfolio5.png',
-      title:'Get the winner among you and your friends',
-      github:'https://github.com/duxpixels/Get-the-winner',
-      demo:'https://getthewinner.netlify.app/',
-    },
-    {
-      id:6,
-      img:'portfolio6.png',
-      title:'Tenzies | collect numbers',
-      github:'https://github.com/duxpixels/Tenzies',
-      demo:'https://duxtenzies.netlify.app/',
-    },
-    {
-      id:7,
-      img:'portfolio7.png',
-      title:'Generate memes quickly',
-      github:'https://github.com/duxpixels/memes-generator',
-      demo:'https://meme2generate.netlify.app/',
     },
     {
       id:8,
       img:'portfolio8.png',
       title:'Draw a brilliant photo with boxes',
-      github:'https://github.com/duxpixels/Draw-with-boxes',
+      github:'https://github.com/mohammadabdulhakim/Draw-with-boxes',
       demo:'https://drawwithboxes.netlify.app/',
     },
   ]
@@ -106,24 +78,6 @@ export default function Portfolio() {
       img:'portfolioG8.png',
       title:'',
       view:'https://drive.google.com/file/d/1OBwvZqyrMKWqi3TREOwrORk1KGAJKtny/view?usp=sharing',
-    },
-    {
-      id:7,
-      img:'portfolioG7.png',
-      title:'',
-      view:'https://drive.google.com/file/d/1MDXFjktXxqiLBdgNudBG6FzbIOYPLoXO/view?usp=sharing',
-    },
-    {
-      id:6,
-      img:'portfolioG6.png',
-      title:'',
-      view:'https://drive.google.com/file/d/13FtSJoPGJBe73q-xW7TMHW4GFqVoPBle/view?usp=sharing',
-    },
-    {
-      id:4,
-      img:'portfolioG4.png',
-      title:'',
-      view:'https://drive.google.com/file/d/1E3BQOEvKgNw3poiy0WFiiIQyw9jKl6hY/view?usp=sharing',
     },
     {
       id:1,
@@ -142,12 +96,6 @@ export default function Portfolio() {
       img:'portfolioG3.png',
       title:'',
       view:'https://drive.google.com/file/d/1kcq0QBXZWfRFtWggGqqtgiMvGGeyCO-K/view?usp=sharing',
-    },
-    {
-      id:5,
-      img:'portfolioG5.png',
-      title:'',
-      view:'https://drive.google.com/file/d/1sH-B4vKKS1B8Ss_1LNaHewfwXVXzHbT8/view?usp=sharing',
     },
   ]
 
@@ -175,7 +123,7 @@ export default function Portfolio() {
               <span>n</span><span>p</span><span>m</span> <span>i</span> <span>a</span><span>g</span><span>e</span><span>r</span><span>e</span></h5>
             <div className="cta">
               <a href="https://www.npmjs.com/package/agere" className="btn btn-primary" target="_blank">Show in npm</a>
-              <a href="https://github.com/duxpixels/agere" className="btn" target="_blank">Show in Github</a>
+              <a href="https://github.com/mohammadabdulhakim/agere" className="btn" target="_blank">Show in Github</a>
             </div>
         </div>
       <div className="container protfolio-container">

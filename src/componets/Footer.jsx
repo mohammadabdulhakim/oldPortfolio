@@ -20,15 +20,15 @@ export default  function footer() {
       </h1>
       <div className="social">
       <div className="wrapper">
-          <a className="button" target='_blank' href='https://www.linkedin.com/in/duxpixels/'>
+          <a className="button" target='_blank' href='https://www.linkedin.com/in/mohammadabdulhakim/'>
               <div className="iconn"><GrLinkedin className='i'/></div>
               <span>Linkedin</span>
           </a>
-          <a className="button" target='_blank' href='https://twitter.com/dux_pixels'>
+          <a className="button" target='_blank' href='#'>
               <div className="iconn"><ImTwitter className='i'/></div>
               <span>Twitter</span>
           </a>
-          <a className="button" target='_blank' href='https://github.com/duxpixels'>
+          <a className="button" target='_blank' href='https://github.com/mohammadabdulhakim'>
               <div className="iconn"><BsGithub className='i'/></div>
               <span>Github</span>
           </a>

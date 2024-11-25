@@ -7,7 +7,7 @@ import {BsTwitter} from 'react-icons/bs'
 
 
 
-export default function Header(props) {
+export default function Header() {
   return (
     <header>
       <div className="container header-container">
@@ -26,12 +26,12 @@ export default function Header(props) {
         <h5 id='job' className='text-light'>Frontend Web Developer</h5>
         <CTA />
         <div className="header-social">
-          <a href="https://www.linkedin.com/in/duxpixels/" target='_blank'><BsLinkedin /></a>
-          <a href="https://github.com/duxpixels" target='_blank'><BsGithub /></a>
-          <a href="https://twitter.com/dux_pixels" target='_blank'><BsTwitter /></a>
+          <a href="https://www.linkedin.com/in/mohammadabdulhakim/" target='_blank'><BsLinkedin /></a>
+          <a href="https://github.com/mohammadabdulhakim" target='_blank'><BsGithub /></a>
+          <a href="#" target='_blank'><BsTwitter /></a>
         </div>
         <div className="me">
-          { props.started && <img className="video" url={require("../images/dux-video-alternative.png")} />}
+          <img className='video' style={{objectFit: "contain"}} src={require("../images/dux-video-alternative.png")} />
         </div>
         <a href="#footer" className='scroll-down'>SCROLL DOWN <span style={{letterSpacing:'-2px'}}>————▷</span></a>
       </div>
