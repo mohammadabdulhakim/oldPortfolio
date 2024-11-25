@@ -31,7 +31,7 @@ export default function Header(props) {
           <a href="https://twitter.com/dux_pixels" target='_blank'><BsTwitter /></a>
         </div>
         <div className="me">
-          { props.started && <ReactPlayer className="video" url={require("../images/dux-video.mp4")} playing volume="0.3" />}
+          { props.started && <img className="video" url={require("../images/dux-video-alternative.png")} />}
         </div>
         <a href="#footer" className='scroll-down'>SCROLL DOWN <span style={{letterSpacing:'-2px'}}>————▷</span></a>
       </div>
